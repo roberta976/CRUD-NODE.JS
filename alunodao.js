@@ -31,8 +31,9 @@ class AlunoDao {
                 function (err, results) {
                     if (err) {
                         reject(err);
-                    } else {
+                    }else {
                         resolve(results);
+                        console.log(results)
                     }
                 }
 

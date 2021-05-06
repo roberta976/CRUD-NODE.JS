@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alunos</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body style="background: linear-gradient(to right, #83a4d4, #b6fbff);" >
+    <div class="container" style="box-shadow:0 0 10px rgba(0,0,0,0.3515); background-color:#ffffff;
+    padding: 5px 30px; border-radius: 5px; margin-top: 50px; width: 800px">
+        <h1 style="font-family: 'raleway', sans-serif">Alunos</h1>
+    <br>
+    <a href="/form" class="btn-floating btn-large waves-effect waves-light  pink lighten-1" ><i class="material-icons">add</i></a>
+    <br>
+    <table>
+        <thead style="font-family: 'Raleway', sans-serif">
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Curso</th>
+            <th>Opções</th>
+        </thead>
+        <for|aluno, index| of=data.results>
+            <tr style="font-family: 'Poppins', sans-serif">
+                <td>${aluno.id}</td>
+                <td>${aluno.nome}</td>
+                <td>${aluno.curso}</td>
+                <td>
+                    <a style="margin-right: 10pt;" href="/form/${aluno.id}" class="btn-floating btn-small waves-effect waves-light  blue lighten-1" ><i class="material-icons">edit</i></a>
+
+                    <a href="/alunos/delete/${aluno.id}" class="btn-floating btn-small waves-effect waves-light red" ><i class="material-icons">delete</i></a>
+
+                </td>
+            </tr>
+            </for>
+    </table>
+    </div>
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <for|message, index| of=data.error_messages>
+        <script>
+            M.toast({
+                html: '${message}',
+                classes: ' red lighten-2'
+            })
+        </script>
+    </for>
+    <for|message, index| of=data.sucess_messages>
+        <script>
+           M.toast({
+                html: '${message}',
+                classes: 'green lighten-2'
+            })
+        </script>
+    </for>
+   
+</body>
+
+</html>

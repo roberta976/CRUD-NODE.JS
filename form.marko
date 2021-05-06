@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body style="background: linear-gradient(to right, #83a4d4, #b6fbff);">
+    <div class="container" style="box-shadow:0 0 10px rgba(0,0,0,0.3515); background-color:#ffffff;
+    padding: 5px 30px 20px 30px; border-radius: 5px; margin-top: 50px; width: 800px">
+    
+        <h1 style="font-family: 'raleway', sans-serif">Cadastro</h1>
+    <br>
+    <form action="/alunos" method="POST">
+        <div class="form-group">
+            <input type="hidden" name="id" value="${data.id}">
+        </div>
+   
+        <div class="form-group">
+            <input type="text" name="nome" id="" placeholder="Digite seu nome" value="${data.nome}">
+        </div>
+ 
+        <div class="form-group">
+            <input type="email" name="email" id="" placeholder="Digite seu e-mail" value="${data.email}">
+        </div>    
+     
+       <div class="form-group ">
+            <label>Curso: </label>
+            <p>
+                <label>
+                    <input name="curso" type="radio" value="Tecnologia em ADS" checked="${data.curso == 'Tecnologia em ADS'}" />
+                    <span>ADS</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input name="curso" type="radio" value="Téc. em Qualidade" checked="${data.curso == 'Téc. em Qualidade'}" />
+                    <span>Qualidade</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input name="curso" type="radio" value="Téc. em IPI" checked="${data.curso == 'Téc. em IPI'}" />
+                    <span>Informática Para Internet</span>
+                </label>
+            </p>
+       </div>
+        
+        
+        <a href="/" style="margin-right: 10pt" class="waves-effect waves-light red btn">Cancelar</a>
+        <button type="submit" class="waves-effect waves-light  blue lighten-1 btn" style="margin-right: 10pt;">Salvar</button>
+    </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
