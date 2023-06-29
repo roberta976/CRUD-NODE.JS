@@ -1,6 +1,6 @@
 # CRUD-Node.js
  
- Template da tela de cadastro e listagem, com uso do queridinho template Markojs.
+Template for the registration and listing screen, using the beloved Markojs template.
  
  "author": "Roberta"
  "license": "ISC"
@@ -15,27 +15,34 @@
   "nodemon": "^2.0.7"
   }
   
-  Para iniciar o template, inicie uma nova janela no terminal e digite *npm start* e digite no seu browser: localhost: 3000
 
-_PÁGINA DE LISTAGEM DE ALUNOS_ 
+To start the template, start a new terminal window and type
 
-Nesta página, o usuário dispõe de uma tela de alunos cadastrados, 
-juntamente com seus respectivos dados. é possível editar o cadastro de cada aluno, deletá-lo e até mesmo adicionar um novo aluno à listagem. 
+```bash
+  npm start 
+```
+
+and type in your browser: localhost: 3000
+
+_STUDENT LIST PAGE_
+
+On this page, the user has a screen of registered students,
+together with their respective data. it is possible to edit the registration of each student, delete it and even add a new student to the list.
 
 ![image](https://user-images.githubusercontent.com/66263681/117326684-49a03500-ae68-11eb-87c9-e5d6c88c462f.png)
 
-_PÁGINA DE CADASTRO_
+_REGISTER PAGE_
 
-O processo de editar e adicionar um novo aluno, roda nessa telinha de cadastro e quandoum novo aluno é salvo ou atualizado, ela retorna automaticamente para a tela de listagem
+The process of editing and adding a new student runs on this registration screen and when a new student is saved or updated, it automatically returns to the list screen
 
 ![Captura de Tela (10)](https://user-images.githubusercontent.com/66263681/117316096-aa2a7480-ae5e-11eb-846b-c315f957f6a0.png)
 
 
-A aplicação se torna bastante dinâmica com mensagens(toasts) de erro, e de sucesso
+The application becomes very dynamic with error and success messages (toasts)
 
 ![image](https://user-images.githubusercontent.com/66263681/117328236-d0a1dd00-ae69-11eb-81c2-1b6b715984ec.png)
 
-Com inserção dos dados de cada aluno em um banco de dados MySQL, usando o workbench para criar as tabelas e estabelecer uma conexão de host. Assim, os dados cadastrados são armazenados no banco de dados e são retornados na telinha de listagem.
+Inserting each student's data into a MySQL database, using the workbench to create the tables and establishing a host connection. Thus, the registered data are stored in the database and are returned in the list screen.
 
 ![image](https://user-images.githubusercontent.com/66263681/117328372-f4fdb980-ae69-11eb-92ad-fa159ce1bb12.png)
 
